@@ -9,7 +9,6 @@ on:
 
 jobs:
   build:
-    needs: [flake8-lint]
     name: Build & Push
     runs-on: ubuntu-latest
     env:
