@@ -1,0 +1,42 @@
+#!/bin/bash
+cat <<EOF
+{
+    "created": $(date +%s),
+    "weight": $(date +%s),
+    "alterId": "",
+    "title": "",
+    "host": "${DOMAIN}",
+    "file": "",
+    "filter": "",
+    "downmbps": "",
+    "alpn": "",
+    "uuid": "",
+    "method": "${ENCRYPT}",
+    "flag": "IE",
+    "obfs": "none",
+    "chain": "",
+    "updated": $(date +%s),
+    "type": "Shadowsocks",
+    "cert": "",
+    "plugin": "v2ray-plugin",
+    "user": "",
+    "upmbps": "",
+    "protoParam": "",
+    "port": 443,
+    "pluginParam": {
+        "address": "${DOMAIN}",
+        "port": "443",
+        "mux": true,
+        "mode": "websocket",
+        "tls": true,
+        "host": "${DOMAIN}",
+        "path": "\/${V2_Path}"
+    },
+    "proto": "",
+    "peer": "",
+    "password": "${PASSWORD}",
+    "data": "",
+    "ping": 0,
+    "obfsParam": ""
+}
+EOF

@@ -1,0 +1,38 @@
+---
+name: General CI
+on:
+  push:
+    branches:
+      - 'master'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    needs: [flake8-lint]
+    name: Build & Push
+    runs-on: ubuntu-latest
+    env:
+      REPOSITORY_URL: ghcr.io
+      IMAGE_NAME: oldtyt/shadowsocks_v2ray_docker
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.5.3
+      - name: Variables
+        id: vars
+        run: echo "::set-output name=SHORT_COMMIT_ID::$(git rev-parse --short HEAD)"
+      - name: Build image
+        id: docker-build
+        run: >-
+          docker build
+          -t $IMAGE_NAME
+          -t $REPOSITORY_URL/$IMAGE_NAME:latest .
+      - name: Docker Login
+        uses: docker/login-action@v2
+        with:
+          registry: ${{ env.REPOSITORY_URL }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish Image
+        id: docker-push
+        run: docker push --all-tags $REPOSITORY_URL/$IMAGE_NAME
