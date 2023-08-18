@@ -28,7 +28,7 @@ There are several ways available:
 |ENV|Default value|Whats is it|
 |-|-|-|
 |`PASSWORD`|`5c301bb8-6c77-41a0-a606-4ba11bbab084`|Shadowsocks password|
-|`ENCRYPT`|`chacha20-ietf-poly1305`|Shadowsocks encrypt type. [See for more](https://www.v2ray.com/en/configuration/protocols/shadowsocks.html)|
+|`ENCRYPT`|`chacha20-ietf-poly1305`|Shadowsocks encrypt type. [See for more](https://www.v2ray.com/en/configuration/protocols/shadowsocks.html#encryption-methods).|
 |`V2_Path`|`s233`|V2Ray path|
 |`QR_Path`|`/qr_img`|Path to qr code|
 |`DOMAIN`|`localhost`|Shadowsocks domain|
