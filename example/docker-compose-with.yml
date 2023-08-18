@@ -1,0 +1,12 @@
+---
+version: "3.8"
+
+services:
+  shadowsocks:
+    image: ghcr.io/oldtyt/shadowsocks_v2ray_docker
+    restart: always
+    ports:
+      - "80:80"
+    environment:
+      - PASSWORD=PASSWORD
+      - DOMAIN=SS.DOMAIN.TLD
