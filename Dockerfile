@@ -1,4 +1,4 @@
-FROM alpine:3.18.3 as downloader
+FROM alpine:3.20.2 as downloader
 
 ARG V2RAY_VERSION=v1.3.2
 
