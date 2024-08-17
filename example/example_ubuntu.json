@@ -1,0 +1,18 @@
+{
+    "server": "shadowsocks.example.tld",
+    "server_port": 443,
+    "password": "PASSWORD",
+    "method": "chacha20-ietf-poly1305",
+    "plugin": "/usr/bin/v2ray-plugin",
+    "plugin_opts": "path=\/PATH;mux=15;host=shadowsocks.example.tld;tls",
+    "remarks": "",
+    "route": "bypass-lan",
+    "remote_dns": "1dot1dot1dot1.cloudflare-dns.com",
+    "ipv6": true,
+    "metered": false,
+    "local_port": 8888,
+    "proxy_apps": {
+      "enabled": false
+    },
+    "udpdns": false
+}
