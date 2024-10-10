@@ -2,6 +2,10 @@
 
 Shadowsocks in docker container with v2ray plugin
 
+## Tuning server
+
+1. Enable tcp fast open. [See for more](https://github.com/shadowsocks/shadowsocks/wiki/TCP-Fast-Open)
+
 ## How to deploy
 
 1. Install docker on your server
